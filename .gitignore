@@ -23,5 +23,6 @@
 # Ignore Spring files.
 /spring/*.pid
 
+/coverage
 /node_modules
 /yarn-error.log
