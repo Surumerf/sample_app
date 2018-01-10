@@ -23,6 +23,9 @@
 # Ignore Spring files.
 /spring/*.pid
 
+# Ignore uploaded test images.
+/public/uploads
+
 /coverage
 /node_modules
 /yarn-error.log
