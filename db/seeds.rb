@@ -1,3 +1,11 @@
+=begin 
+------------------------------------
+For development
+------------------------------------
+=end
+
+=begin
+
 # Users
 User.create!(
     name: "Example User",
@@ -37,3 +45,28 @@ following = users[2..50]
 followers = users[3..40]
 following.each {|followed| user.follow(followed)}
 followers.each {|follower| follower.follow(user)}
+
+=end
+
+=begin 
+------------------------------------
+For production
+------------------------------------
+=end
+
+# Users
+User.create!(
+    name: "Example User",
+    email: "example@railstutorial.org",
+    password: "foobar",
+    password_confirmation: "foobar",
+    activated: true,
+    activated_at: Time.zone.now
+)
+
+# Microposts
+user = User.first
+50.times do
+    content = Faker::HarryPotter.quote
+    user.microposts.create!(content: content)}
+end
