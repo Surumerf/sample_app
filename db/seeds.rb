@@ -68,5 +68,5 @@ User.create!(
 user = User.first
 50.times do
     content = Faker::HarryPotter.quote
-    user.microposts.create!(content: content)}
+    user.microposts.create!(content: content)
 end
