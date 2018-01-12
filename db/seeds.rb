@@ -66,7 +66,9 @@ User.create!(
 
 # Microposts
 user = User.first
-50.times do
+100.times do
     content = Faker::HarryPotter.quote
-    user.microposts.create!(content: content)
+    if content.length < 140
+        user.microposts.create!(content: content)
+    end
 end
