@@ -9,7 +9,7 @@ This is the reference implementation of the sample application for the 4th editi
 
 ## License
 
-All sources code in the [Ruby on Rails Tutorial](http://www.railstutorial.org/) is available jointly under the MIT License and the Beerware License. See [LICENSE.md](LICENSE.md) for more details.
+All sources code in the [Ruby on Rails Tutorial](http://www.railstutorial.org/) is available jointly under the MIT License and the Beerware License. See [LICENSE.md](https://github.com/Surumerf/sample_app/blob/master/LICENSE.md) for more details.
 
 ## Getting started
 
