@@ -2,13 +2,7 @@ machine:
   timezone:
     Asia/Tokyo
   ruby:
-    version:
-      2.4.1
-
-dependencies:
-  override:
-    - bundle install:
-        timeout: 180
+    version: 2.4.1
 
 database:
   pre:
