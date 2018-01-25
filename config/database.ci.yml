@@ -1,7 +1,0 @@
-test:
-  adapter: postgresql
-  encoding: utf8
-  pool: 5
-  timeout: 10000
-  database: test
-  username: postgres
