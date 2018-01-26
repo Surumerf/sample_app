@@ -1,18 +1,15 @@
 language: ruby
-
 rvm: 2.4.1
-
 services:
-  - postgresql
-
+- postgresql
 bundler_args: "--without development --deployment"
-
 cache: bundler
-
 before_script:
-  - cp config/database.travis.yml config/database.yml
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
-
+- cp config/database.travis.yml config/database.yml
+- bundle exec rake db:create
+- bundle exec rake db:migrate
 script:
-  - bundle exec rake test
+- bundle exec rake test
+notifications:
+  slack:
+    secure: VQ9g7SUYjoqyylCcinrFnDPCBKBmyagoasdeqLiKecjY0Z/ogKTsIEA30uKORjzffcmt5hEANbKENlRPcPPXS3BoWq1xlkZJZxremIOy0ymFjb9Gh9F/6p4ex97scG1m4GtSNvjE9Qg6BQVsjyFJFgMrvS2sYIp5KU5zWe/gRgrvQ701hp37hdbee8sp68gnLxhvBlQkUl9143Y+6HfEAwTWkAjhmK0FsgTuluGzAa8m4dl+aVuBJcutDUbRyiS0bXeWtq4jSkNnEuwubX+g8dDgseaydK6OiY28/q3G/22zKU2q9wIqANzyrZn1Q8QpZibUADhxij5dIJXCYxWzdooidSoiLK2WVe69B8wg4YTKpeCuA4TetSaxY0VzBhMNETQQl+EpSdVjYyt3uB/RFu6AjjSkg2turty2rxzWZACMguJrRhYE5s0mYFQVKmWeX6zkyaK9oEABiBTm9jar9KmPsp6Nbd20Ug+k9TsnNURN1MPTUJzMOYbprI92LHuU0z2jxLlncxGDYD718FHPpB42GzrhwKVDOchNn+qEAAKhDWDP5AN6YUaSKsQYJfkIekS74wMG8ewgIiIKJkrc2NI5E0EN/wi6W2ICH7xFsb47GI8GlEDx4mYeMny5+rnQ2pVD0M74JDvhH975GxhufTMv4fURfD0RqVseEI/QErs=
